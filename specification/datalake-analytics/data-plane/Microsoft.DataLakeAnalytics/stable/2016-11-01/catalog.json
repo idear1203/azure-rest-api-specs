@@ -1291,7 +1291,7 @@
         "tags": [
           "Catalog"
         ],
-        "operationId": "Catalog_GetView",
+        "operationId": "Catalog_GetView1",
         "description": "Retrieves the specified view from the Data Lake Analytics catalog.",
         "parameters": [
           {
