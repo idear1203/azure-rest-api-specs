@@ -15,7 +15,7 @@
     "responses": {
         "200": {
             "body": {
-                "nextLink":"https://contosoadla.datalakeanalytics.net/catalog/usql/databases/master/schema/dbo/statistics?api-version=2016-11-01&%24skiptoken=<token>",
+                "nextLink":"https://contosoadla.datalakeanalytics.net/catalog/usql/databases/master/tables?api-version=2016-11-01&skiptoken=<token>",
                 "value":[{
                     "computeAccountName": "contosoadla",             
                     "version": "34adfa4f-cedf-4dc0-ba29-b6d1a69ab345",
@@ -79,7 +79,8 @@
                         "count": 1,
                         "dynamicCount": 1
                     }
-                }]
+                }],
+                "count": 1
             }
         }
     }
