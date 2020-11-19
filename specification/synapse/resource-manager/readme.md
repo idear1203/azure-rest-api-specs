@@ -156,7 +156,7 @@ csharp:
   clear-output-folder: true
 batch:
  - tag: package-2019-06-01-preview
- - tag: package-sqlGen3-2020-04-01-preview
+ #- tag: package-sqlGen3-2020-04-01-preview
 ```
 
 ## Go
