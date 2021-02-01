@@ -1,13 +1,24 @@
 {
   "swagger": "2.0",
   "info": {
-    "title": "ArtifactsClient",
-    "version": "2019-06-01-preview"
+    "title": "DataFactoryManagementClient",
+    "version": "2018-06-01"
+  },
+  "securityDefinitions": {
+    "azure_auth": {
+      "type": "oauth2",
+      "authorizationUrl": "https://login.microsoftonline.com/common/oauth2/authorize",
+      "flow": "implicit",
+      "description": "Azure Active Directory OAuth2 Flow.",
+      "scopes": {
+        "user_impersonation": "impersonate your user account"
+      }
+    }
   },
   "paths": {},
   "definitions": {
     "DataFlow": {
-      "description": "Azure Synapse nested object which contains a flow with data movements and transformations.",
+      "description": "Azure Data Factory nested object which contains a flow with data movements and transformations.",
       "type": "object",
       "discriminator": "type",
       "properties": {
@@ -36,10 +47,7 @@
             }
           }
         }
-      },
-      "required": [
-        "type"
-      ]
+      }
     },
     "MappingDataFlow": {
       "x-ms-discriminator-value": "MappingDataFlow",
@@ -115,7 +123,15 @@
       "properties": {
         "dataset": {
           "description": "Dataset reference.",
-          "$ref": "../artifacts.json#/definitions/DatasetReference"
+          "$ref": "../datafactory.json#/definitions/DatasetReference"
+        },
+        "linkedService": {
+          "description": "Linked service reference.",
+          "$ref": "../datafactory.json#/definitions/LinkedServiceReference"
+        },
+        "schemaLinkedService": {
+          "description": "Schema linked service reference.",
+          "$ref": "../datafactory.json#/definitions/LinkedServiceReference"
         }
       }
     },
@@ -129,7 +145,15 @@
       "properties": {
         "dataset": {
           "description": "Dataset reference.",
-          "$ref": "../artifacts.json#/definitions/DatasetReference"
+          "$ref": "../datafactory.json#/definitions/DatasetReference"
+        },
+        "linkedService": {
+          "description": "Linked service reference.",
+          "$ref": "../datafactory.json#/definitions/LinkedServiceReference"
+        },
+        "schemaLinkedService": {
+          "description": "Schema linked service reference.",
+          "$ref": "../datafactory.json#/definitions/LinkedServiceReference"
         }
       }
     }
