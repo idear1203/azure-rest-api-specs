@@ -997,7 +997,8 @@
           "description": "The type of managed identity for the workspace",
           "enum": [
             "None",
-            "SystemAssigned"
+            "SystemAssigned",
+            "SystemAssigned,UserAssigned"
           ],
           "type": "string",
           "x-ms-enum": {
